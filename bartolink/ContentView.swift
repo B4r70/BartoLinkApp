@@ -2,23 +2,34 @@
 //  ContentView.swift
 //  bartolink
 //
-//  Created by Barto on 30.04.26.
-//
 
 import SwiftUI
+import SwiftData
+
 
 struct ContentView: View {
+
+    @EnvironmentObject var tokenStore: PushTokenStore
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            NotificationListView()
+                .tabItem {
+                    Label("Inbox", systemImage: "tray.fill")
+                }
+
+            StatusView()
+                .tabItem {
+                    Label("Status", systemImage: "antenna.radiowaves.left.and.right")
+                }
         }
-        .padding()
+        .tint(.blue)
     }
 }
 
+
 #Preview {
     ContentView()
+        .environmentObject(PushTokenStore.shared)
+        .modelContainer(for: StoredNotification.self, inMemory: true)
 }

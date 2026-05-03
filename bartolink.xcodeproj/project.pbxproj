@@ -6,19 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4E6D8EFD2FA76749001106B6 /* bartolinkNotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4E6D8EF62FA76749001106B6 /* bartolinkNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E6D8EFB2FA76749001106B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EECD4342FA3B39A00E77E49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E6D8EF52FA76749001106B6;
+			remoteInfo = bartolinkNotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E6D8F022FA76749001106B6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4E6D8EFD2FA76749001106B6 /* bartolinkNotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4E6D8EF62FA76749001106B6 /* bartolinkNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = bartolinkNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EECD43C2FA3B39A00E77E49 /* bartolink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bartolink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4E6D8EFE2FA76749001106B6 /* Exceptions for "bartolinkNotificationService" folder in "bartolinkNotificationService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */;
+		};
+		4E6D8F052FA76804001106B6 /* Exceptions for "bartolink" folder in "bartolinkNotificationService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/StoredNotification.swift,
+				Persistence/AppGroup.swift,
+			);
+			target = 4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		4E6D8EF72FA76749001106B6 /* bartolinkNotificationService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4E6D8EFE2FA76749001106B6 /* Exceptions for "bartolinkNotificationService" folder in "bartolinkNotificationService" target */,
+			);
+			path = bartolinkNotificationService;
+			sourceTree = "<group>";
+		};
 		4EECD43E2FA3B39A00E77E49 /* bartolink */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4E6D8F052FA76804001106B6 /* Exceptions for "bartolink" folder in "bartolinkNotificationService" target */,
+			);
 			path = bartolink;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E6D8EF32FA76749001106B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EECD4392FA3B39A00E77E49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				4EECD43E2FA3B39A00E77E49 /* bartolink */,
+				4E6D8EF72FA76749001106B6 /* bartolinkNotificationService */,
 				4EECD43D2FA3B39A00E77E49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4EECD43C2FA3B39A00E77E49 /* bartolink.app */,
+				4E6D8EF62FA76749001106B6 /* bartolinkNotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +115,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6D8EFF2FA76749001106B6 /* Build configuration list for PBXNativeTarget "bartolinkNotificationService" */;
+			buildPhases = (
+				4E6D8EF22FA76749001106B6 /* Sources */,
+				4E6D8EF32FA76749001106B6 /* Frameworks */,
+				4E6D8EF42FA76749001106B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4E6D8EF72FA76749001106B6 /* bartolinkNotificationService */,
+			);
+			name = bartolinkNotificationService;
+			packageProductDependencies = (
+			);
+			productName = bartolinkNotificationService;
+			productReference = 4E6D8EF62FA76749001106B6 /* bartolinkNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4EECD43B2FA3B39A00E77E49 /* bartolink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EECD4472FA3B39B00E77E49 /* Build configuration list for PBXNativeTarget "bartolink" */;
@@ -55,10 +144,12 @@
 				4EECD4382FA3B39A00E77E49 /* Sources */,
 				4EECD4392FA3B39A00E77E49 /* Frameworks */,
 				4EECD43A2FA3B39A00E77E49 /* Resources */,
+				4E6D8F022FA76749001106B6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4E6D8EFC2FA76749001106B6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4EECD43E2FA3B39A00E77E49 /* bartolink */,
@@ -80,6 +171,9 @@
 				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
+					4E6D8EF52FA76749001106B6 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 					4EECD43B2FA3B39A00E77E49 = {
 						CreatedOnToolsVersion = 26.4.1;
 					};
@@ -100,11 +194,19 @@
 			projectRoot = "";
 			targets = (
 				4EECD43B2FA3B39A00E77E49 /* bartolink */,
+				4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E6D8EF42FA76749001106B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EECD43A2FA3B39A00E77E49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +217,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E6D8EF22FA76749001106B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EECD4382FA3B39A00E77E49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +233,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4E6D8EFC2FA76749001106B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */;
+			targetProxy = 4E6D8EFB2FA76749001106B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4E6D8F002FA76749001106B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = bartolinkNotificationService/bartolinkNotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XVYRUG73C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bartolinkNotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = bartolinkNotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barto.bartolink.bartolinkNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E6D8F012FA76749001106B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = bartolinkNotificationService/bartolinkNotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6XVYRUG73C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bartolinkNotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = bartolinkNotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barto.bartolink.bartolinkNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4EECD4452FA3B39B00E77E49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -251,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bartolink/bartolink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6XVYRUG73C;
@@ -283,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bartolink/bartolink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6XVYRUG73C;
@@ -313,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E6D8EFF2FA76749001106B6 /* Build configuration list for PBXNativeTarget "bartolinkNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E6D8F002FA76749001106B6 /* Debug */,
+				4E6D8F012FA76749001106B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EECD4372FA3B39A00E77E49 /* Build configuration list for PBXProject "bartolink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

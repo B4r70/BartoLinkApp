@@ -1,0 +1,28 @@
+# Xcode
+build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+.build/
+
+# Secrets — NEVER commit
+Config.swift
+*.env
+
+# macOS
+.DS_Store
+
+# iOS
+*.ipa
+*.dSYM.zip
+*.dSYM
