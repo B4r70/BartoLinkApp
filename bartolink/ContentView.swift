@@ -10,20 +10,24 @@ import SwiftData
 struct ContentView: View {
 
     @EnvironmentObject var tokenStore: PushTokenStore
+    @State private var selection: SLTab = .inbox
 
     var body: some View {
-        TabView {
-            NotificationListView()
-                .tabItem {
-                    Label("Inbox", systemImage: "tray.fill")
+        ZStack(alignment: .bottom) {
+            Group {
+                switch selection {
+                case .inbox:
+                    NotificationListView()
+                case .status:
+                    StatusView()
                 }
+            }
+            .transition(.opacity)
 
-            StatusView()
-                .tabItem {
-                    Label("Status", systemImage: "antenna.radiowaves.left.and.right")
-                }
+            SLTabBar(selection: $selection)
+                .padding(.bottom, 18)
         }
-        .tint(.blue)
+        .ignoresSafeArea(.keyboard)
     }
 }
 

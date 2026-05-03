@@ -89,6 +89,30 @@ final class StoredNotification {
     var hasTrainMetadata: Bool {
         trainLine != nil || trainNumber != nil || delayMinutes != nil
     }
+
+    /// Verspätet laut Metadaten? (delayMinutes > 0 oder statusRaw == "delayed")
+    var isDelayed: Bool {
+        if let d = delayMinutes, d > 0 { return true }
+        if statusRaw?.lowercased() == "delayed" { return true }
+        return false
+    }
+
+    /// Eignet sich diese Notification für die Live-Hero-Karte oben in der Inbox?
+    /// Kriterien: Zug-Metadaten + verspätet + jung (< 30 Min) + Abfahrt < 60 Min
+    /// in der Zukunft.
+    var liveHeroEligible: Bool {
+        guard hasTrainMetadata, isDelayed else { return false }
+
+        let now = Date()
+        guard now.timeIntervalSince(receivedAt) < 30 * 60 else { return false }
+
+        let reference = plannedDeparture ?? actualDeparture
+        if let dep = reference {
+            let diff = dep.timeIntervalSince(now)
+            return diff > -5 * 60 && diff < 60 * 60
+        }
+        return true
+    }
 }
 
 
