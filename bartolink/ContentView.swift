@@ -2,6 +2,8 @@
 //  ContentView.swift
 //  bartolink
 //
+//  Sprint 3b: NotificationListView → TripListView
+//
 
 import SwiftUI
 import SwiftData
@@ -17,7 +19,7 @@ struct ContentView: View {
             Group {
                 switch selection {
                 case .inbox:
-                    NotificationListView()
+                    TripListView()
                 case .status:
                     StatusView()
                 }

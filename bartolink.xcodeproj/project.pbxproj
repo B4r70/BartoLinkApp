@@ -51,6 +51,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Models/StoredNotification.swift,
+				Models/TripSummary.swift,
 				Persistence/AppGroup.swift,
 			);
 			target = 4E6D8EF52FA76749001106B6 /* bartolinkNotificationService */;
