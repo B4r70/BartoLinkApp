@@ -8,7 +8,6 @@
 
 import UIKit
 import Combine    // ← bringt Combine + ObservableObject mit
-import SwiftData
 import os.log
 
 
@@ -35,9 +34,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
     private let logger = Logger(subsystem: "com.barto.bartolink", category: "PushSetup")
 
-    /// Wird von BartolinkApp gesetzt sobald der ModelContainer existiert.
-    /// Nullable, weil AppDelegate vor SwiftData initialisiert wird.
-    var modelContext: ModelContext?
         // MARK: - App-Lifecycle
 
     func application(
@@ -139,28 +135,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
         completionHandler()
     }
-
-
-    // MARK: - Persistenz
-
+    
+    
+        // MARK: - Persistenz
+    
+        /// Persistenz übernimmt jetzt die Notification Service Extension.
+        /// Diese Methode bleibt als Hook für zukünftige Foreground-Logik
+        /// (z.B. Inbox-Badge aktualisieren, lokale Banner-Sounds, etc).
     private func store(notification: UNNotification) {
-        guard let context = modelContext else {
-            logger.warning("ModelContext nicht verfügbar — Notification nicht persistiert.")
-            return
-        }
-
-        let userInfo = notification.request.content.userInfo
-        guard let stored = StoredNotification.fromAPNsUserInfo(userInfo) else {
-            logger.warning("Konnte Notification-Payload nicht parsen.")
-            return
-        }
-
-        context.insert(stored)
-        do {
-            try context.save()
-            logger.info("Notification persistiert: \(stored.title) (source=\(stored.source))")
-        } catch {
-            logger.error("Persistenz-Fehler: \(error.localizedDescription)")
-        }
+            // Bewusst leer — Doppel-Save vermeiden.
     }
 }

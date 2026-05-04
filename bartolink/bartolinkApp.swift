@@ -39,10 +39,6 @@ struct BartolinkApp: App {
             ContentView()
                 .environmentObject(tokenStore)
                 .modelContainer(modelContainer)
-                .onAppear {
-                        // ModelContext an AppDelegate weiterreichen für Push-Persistenz
-                    appDelegate.modelContext = modelContainer.mainContext
-                }
                 .onChange(of: tokenStore.token) { _, newValue in
                     if let token = newValue {
                         Task { await registerWithBackend(token: token) }
